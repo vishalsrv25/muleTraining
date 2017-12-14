@@ -27,7 +27,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
             <vm:outbound-endpoint exchange-pattern="one-way" path="split" doc:name="VM"/>
             <vm:inbound-endpoint exchange-pattern="one-way" path="auction.service" doc:name="VM"/>
         </request-reply>
-        <set-payload value="#['{ &quot;winner&quot; : &quot;' + payload + '&quot; }']" doc:name="Set Payload"/>
+        <set-payload value="#['{ &quot;winner is&quot; : &quot;' + payload + '&quot; }']" doc:name="Set Payload"/>
     <!-- vm endpoint responsible for pushing result back to test -->
   </flow>
     <flow name="splitbids">
